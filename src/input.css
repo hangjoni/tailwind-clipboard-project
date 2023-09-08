@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h3 {
+    @apply text-3xl font-medium text-darkGrayishBlue;
+  }
+  h5 {
+    @apply text-2xl font-medium text-darkGrayishBlue;
+  }
+  p {
+    @apply text-grayishBlue tracking-wide leading-7 text-lg;
+  }
+  button {
+    @apply rounded-full max-w-xs w-full text-white py-3 text-lg;
+  }
+}
+
+.section-container {
+  @apply flex flex-col justify-center items-center gap-6 max-w-6xl mx-auto text-center my-24 px-16;
+}
+
+.vertical-container {
+  @apply flex flex-col justify-between items-center;
+}
+
+.responsive-container {
+  @apply flex flex-col md:flex-row justify-center items-center;
+}
+
+body {
+  background-image: url("../../all-project-assets/clipboard/images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("../../all-project-assets/clipboard/images/bg-header-mobile.png");
+  }
+}
